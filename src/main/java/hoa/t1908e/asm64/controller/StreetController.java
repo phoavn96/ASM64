@@ -15,9 +15,9 @@ public class StreetController {
 
 
     @GetMapping
-    public Iterable<Street> streetList(@RequestParam(required = false,defaultValue = "") String keyword){
+    public Iterable<Street> streetList(@RequestParam(required = false,defaultValue = "") String name,@RequestParam(required = false,defaultValue = "") String nameDistrict){
 
-        return streetService.getList(keyword);
+        return streetService.getList(name,nameDistrict);
 
     }
 

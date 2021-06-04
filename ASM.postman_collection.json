@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "f6a7d661-1650-40e4-8851-fed61ad805e6",
-		"name": "ASM64",
+		"_postman_id": "d272cdb1-7e0e-4c4d-80a4-730a889eaaeb",
+		"name": "ASM",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -30,7 +30,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8888/streets?keyword=Lý Nam Đế",
+					"raw": "http://localhost:8888/streets?name=Lý Nam Đế&nameDistrict=Ba Đình",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -41,8 +41,12 @@
 					],
 					"query": [
 						{
-							"key": "keyword",
+							"key": "name",
 							"value": "Lý Nam Đế"
+						},
+						{
+							"key": "nameDistrict",
+							"value": "Ba Đình"
 						}
 					]
 				}

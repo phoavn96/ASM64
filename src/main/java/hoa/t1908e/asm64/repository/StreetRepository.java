@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface StreetRepository extends JpaRepository<Street,Integer> {
-@Query("select s from Street s where s.name like %:keyword% or s.nameDistrict like %:keyword% ")
-List<Street> searchByNameOrNameDistrict(@Param(value = "keyword") String keyword);
+@Query("select s from Street s where s.name like %:name% and s.nameDistrict like %:nameDistrict% ")
+List<Street> searchByNameOrNameDistrict(@Param(value = "name") String name,@Param(value = "nameDistrict") String nameDistrict);
 
 }

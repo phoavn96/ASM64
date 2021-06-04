@@ -18,8 +18,8 @@ public class StreetService {
     }
 
 
-    public Iterable<Street> getList(String keyword){
-        return streetRepository.searchByNameOrNameDistrict(keyword);
+    public Iterable<Street> getList(String name,String nameDistrict){
+        return streetRepository.searchByNameOrNameDistrict(name,nameDistrict);
     }
 
 
