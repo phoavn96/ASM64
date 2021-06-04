@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "f6a7d661-1650-40e4-8851-fed61ad805e6",
+		"name": "ASM64",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/streets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"streets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListFilter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/streets?keyword=Lý Nam Đế",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"streets"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Lý Nam Đế"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateStreet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Trần Phú\",\r\n    \"description\": \"ok\",\r\n        \"district\": {\r\n            \"districtId\": 1,\r\n            \"nameDistrict\": \"Ba Đình\"\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/streets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"streets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
